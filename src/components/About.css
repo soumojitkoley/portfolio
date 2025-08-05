@@ -1,0 +1,13 @@
+.about-container{
+  width: 100%;
+  top:10rem;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position:fixed; */
+}
+
+.about-container h1{
+  font-size: 4rem;
+}
