@@ -1,52 +1,21 @@
 import React from 'react';
-import './Navbar.css';
-import { NavLink, useLocation } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import LocomotiveScroll from 'locomotive-scroll';
-const locomotiveScroll = new LocomotiveScroll();
+import './Navbar.css';
 
 const Navbar = () => {
-  const location = useLocation()
   const isMobile = useMediaQuery({ maxWidth: 768 })
   const [isMenuOpen, setMenuOpen] = useState(false)
-  const [path, setPath] = useState(false)
 
   const handleMenuToggle = () => {
     setMenuOpen(!isMenuOpen)
   };
 
-  useEffect(() => {
-    if (location.pathname == '/doctors' || location.pathname == '/hospitals' || location.pathname == '/blood-bank') {
-      setPath(true)
-    }
-  }, [location.pathname])
-
-  function scrollHandler(scrollTarget) {
-    if (scrollTarget == '') {
-      locomotiveScroll.scrollTo(0, 0)
-    }
-    else if (scrollTarget == '#abt' && isMobile == false) {
-      locomotiveScroll.scrollTo(770)
-    }
-    else if (scrollTarget == '#svc' && isMobile == false) {
-      locomotiveScroll.scrollTo(1320)
-    }
-    else if (scrollTarget == '#abt' && isMobile == true) {
-      locomotiveScroll.scrollTo(1570)
-    }
-    else if (scrollTarget == '#svc' && isMobile == true) {
-      locomotiveScroll.scrollTo(2670)
-    }
-    else {
-      locomotiveScroll.scrollTo(scrollTarget)
-    }
-  }
 
   return (
     <div className="navbar">
-      <h1 onClick={() => { scrollHandler('') }} className='navbar-h1'><span className='blue'>Soumojit</span><span className='green'>Koley</span></h1>
+      <h2 onClick={() => { scrollHandler('') }} className='navbar-h1'>Soumojit.</h2>
       {isMobile ? (
         <div className='hello'>
           <label class="burger" for="burger">
@@ -64,51 +33,35 @@ const Navbar = () => {
                 transition={{ duration: 0.3 }}
               >
                 <div className="nav-menu">
+                <h2 onClick={() => { scrollHandler('') }} className='navbar-h1-mobile'>Soumojit.</h2>
                   <ul type="none" className="list">
                     <li>
-                      <NavLink onClick={() => { scrollHandler(''), handleMenuToggle() }} to="/" className="link">
-                        Home
-                      </NavLink>
-                    </li>
-                    {
-                      !path ? (
-                        <li>
-                          <a onClick={() => { scrollHandler('#abt'), handleMenuToggle() }} className="link">
-                            About
-                          </a>
-                        </li>
-                      )
-                        :
-                        (<></>)
-                    }
-                    {
-                      !path ? (
-                        <li>
-                          <a onClick={() => { scrollHandler('#svc'), handleMenuToggle() }} className="link">
-                            Services
-                          </a>
-                        </li>
-                      )
-                        :
-                        (<></>)
-                    }
-                    <li>
-                      <NavLink onClick={handleMenuToggle} to="/doctors" className="link">
-                        Doctors
-                      </NavLink>
+                      <a onClick={() => scrollHandler('#abt')} className="link">
+                        About
+                      </a>
                     </li>
                     <li>
-                      <NavLink onClick={handleMenuToggle} to="/hospitals" className="link">
-                        Hospitals
-                      </NavLink>
+                      <a onClick={() => scrollHandler('#abt')} className="link">
+                        Experience
+                      </a>
                     </li>
                     <li>
-                      <NavLink onClick={handleMenuToggle} to="/blood-bank" className="link">
-                        Blood Bank
-                      </NavLink>
+                      <a onClick={handleMenuToggle} className="link">
+                        Education
+                      </a>
                     </li>
                     <li>
-                      <a onClick={() => { scrollHandler('#ft'), handleMenuToggle() }} className="link">
+                      <a onClick={() => scrollHandler('#svc')} className="link">
+                        Skills
+                      </a>
+                    </li>
+                    <li>
+                      <a onClick={() => scrollHandler('#svc')} className="link">
+                        Projects
+                      </a>
+                    </li>
+                    <li>
+                      <a onClick={() => scrollHandler('#ft')} className="link">
                         Contact
                       </a>
                     </li>
@@ -122,46 +75,29 @@ const Navbar = () => {
         <div className="nav-menu">
           <ul type="none" className="list">
             <li>
-              <NavLink onClick={() => scrollHandler('')} to="/" className="link">
-                Home
-              </NavLink>
-            </li>
-            {
-              !path ? (
-                <li>
-                  <a onClick={() => scrollHandler('#abt')} className="link">
-                    About
-                  </a>
-                </li>
-              )
-                :
-                (<></>)
-            }
-            {
-              !path ? (
-                <li>
-                  <a onClick={() => scrollHandler('#svc')} className="link">
-                    Services
-                  </a>
-                </li>
-              )
-                :
-                (<></>)
-            }
-            <li>
-              <NavLink to="/doctors" className="link">
-                Doctors
-              </NavLink>
+              <a onClick={() => scrollHandler('#abt')} className="link">
+                About
+              </a>
             </li>
             <li>
-              <NavLink to="/hospitals" className="link">
-                Hospitals
-              </NavLink>
+              <a onClick={() => scrollHandler('#abt')} className="link">
+                Experience
+              </a>
             </li>
             <li>
-              <NavLink to="/blood-bank" className="link">
-                Blood Bank
-              </NavLink>
+              <a onClick={() => scrollHandler('#svc')} className="link">
+                Education
+              </a>
+            </li>
+            <li>
+              <a onClick={() => scrollHandler('#svc')} className="link">
+                Skills
+              </a>
+            </li>
+            <li>
+              <a onClick={() => scrollHandler('#svc')} className="link">
+                Projects
+              </a>
             </li>
             <li>
               <a onClick={() => scrollHandler('#ft')} className="link">

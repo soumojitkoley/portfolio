@@ -8,3 +8,8 @@
   font-style: normal;
   scroll-behavior: smooth;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;        
+}
