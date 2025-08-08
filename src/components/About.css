@@ -1,10 +1,7 @@
 .about-container{
-  width: 100%;
+  width: 80%;
   display: flex;
-  /* justify-content: space-between;
-  align-items:center; */
-  /* position : relative; */
-  margin: 5rem 9rem;
+  margin: 10rem 9rem;
 }
 
 .about-container h1{
@@ -25,6 +22,18 @@
   color: #A1A1AA;
   font-weight: lighter;
 }
+
+.job-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:0.3em;  
+}
+
+.job-logo img{
+  margin-top: 2px;
+}
+
 
 .about-part1-email-location{
   display: flex;  
@@ -77,6 +86,11 @@
   justify-content: center;
   align-items: center;
   border: 1px solid #e5e7eb;
+  transition: 0.5s;
+}
+
+.about-part1-link-box:hover{
+  color:#858484;
 }
 
 .about-part2{
@@ -150,5 +164,9 @@
   .about-part1-email-location{
     align-items: start;
     flex-direction: column;
+  }
+
+  .about-part1-bio{
+    width: 80%;
   }
 }
