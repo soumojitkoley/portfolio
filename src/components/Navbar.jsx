@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { IoMenu, IoClose } from "react-icons/io5";
-import { MdOutlineLightMode } from "react-icons/md";
+import { MdOutlineLightMode, MdOutlineDarkMode  } from "react-icons/md";
 import './Navbar.css';
 
 const Navbar = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isLightMode, setLightMode] = useState(false);
 
   const scrollHandler = (id) => {
-    const section = document.querySelector(id);
-    section?.scrollIntoView({ behavior: 'smooth' });
-    setMenuOpen(false); 
+    const section = document.querySelector(id)
+    section?.scrollIntoView({ behavior: 'smooth' })
+    setMenuOpen(false)
   };
 
   return (
@@ -27,7 +28,7 @@ const Navbar = () => {
             <li><a className="link" onClick={() => scrollHandler('#education')}>Education</a></li>
             <li><a className="link" onClick={() => scrollHandler('#skills')}>Skills</a></li>
             <li><a className="link" onClick={() => scrollHandler('#projects')}>Projects</a></li>
-            <li><a className="link"><MdOutlineLightMode size={20} /></a></li>
+            <li><a className="link" onClick={() => setLightMode(!isLightMode)}>{isLightMode ? <MdOutlineLightMode size={20} /> : <MdOutlineDarkMode size={20} />}</a></li>
           </ul>
         </div>
       )}
