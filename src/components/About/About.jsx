@@ -3,11 +3,11 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
 import { IoIosMail, IoMdDownload } from "react-icons/io";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import mongoo from '../assets/stack/mongodb.svg'
-import expresswhite from '../assets/stack/express-white.svg'
-import reactt from '../assets/stack/react.svg'
-import nodejss from '../assets/stack/nodejs.svg'
-import cognizant from '../assets/icons/cognizant.svg'
+import mongoo from '../../assets/stack/mongodb.svg'
+import expresswhite from '../../assets/stack/express-white.svg'
+import reactt from '../../assets/stack/react.svg'
+import nodejss from '../../assets/stack/nodejs.svg'
+import cognizant from '../../assets/icons/cognizant.svg'
 import TextLoop from "react-text-loop";
 import './About.css'
 

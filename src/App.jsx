@@ -1,5 +1,5 @@
-import Navbar from './components/Navbar'
-import About from './components/About'
+import Navbar from './components/Navbar/Navbar.jsx'
+import About from './components/About/About.jsx'
 import LocomotiveScroll from 'locomotive-scroll';
 const locomotiveScroll = new LocomotiveScroll();
 import './App.css'

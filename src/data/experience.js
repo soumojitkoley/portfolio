@@ -1,7 +1,17 @@
 const data = [
   {
-    title: "",
+    title: "Engineer Trainee",
+    company: "Cognizant",
+    src: "",
+    details: [
+      
+    ],
+    tech: []
+  },
+  {
+    title: "Software Engineer",
     company: "",
+    src: "",
     details: [
       
     ],
