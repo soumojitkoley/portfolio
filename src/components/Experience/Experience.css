@@ -1,0 +1,59 @@
+.exp-container {
+  width: 80%;
+  display: flex;
+  margin: 5rem 0; 
+}
+
+.exp-part {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1.5rem;
+}
+
+.job-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.job-list-part1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap:15px;
+}
+
+.job-details {
+  margin-left: 16px;
+}
+
+.job-tech-used {
+  display: flex;
+  gap:10px;
+}
+
+.job-tech-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #27272a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.job-tech-icon:hover {
+  transform: translateY(-10px);
+}
+
+
+.job-tech-icon img {
+  width: 50%;
+
+}
