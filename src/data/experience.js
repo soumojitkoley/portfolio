@@ -1,3 +1,12 @@
+import serviceNowLogo from '../assets/stack/servicenow.webp'
+import reactLogo from '../assets/stack/react.svg'
+import jsLogo from '../assets/stack/js.svg'
+import cssLogo from '../assets/stack/css.svg'
+import reactRouterLogo from '../assets/stack/react-router-dark.svg'
+import netlifyLogo from '../assets/stack/netlify.png'
+import nodejsLogo from '../assets/stack/nodejs.svg'
+
+
 const data = [
   {
     title: "Engineer Trainee",
@@ -11,8 +20,20 @@ const data = [
     ],
     tech: [
       {
+        name: "React",
+        src: reactLogo,
+      },
+      {
+        name: "JavaScript",
+        src: jsLogo,
+      },
+      {
+        name: "Nodejs",
+        src: nodejsLogo,
+      },
+      {
         name: "Service Now",
-        src: "src hehe",
+        src: serviceNowLogo,
       }
     ]
   },
@@ -29,23 +50,23 @@ const data = [
     tech: [
       {
         name: "React",
-        src: "src hehe",
+        src: reactLogo,
       },
       {
         name: "JavaScript",
-        src: "src hehe",
+        src: jsLogo,
       },
       {
         name: "CSS",
-        src: "src hehe",
+        src: cssLogo,
       },
       {
         name: "React Router",
-        src: "src hehe",
+        src: reactRouterLogo,
       },
       {
         name: "Netlify",
-        src: "src hehe",
+        src: netlifyLogo,
       }
     ]
   }

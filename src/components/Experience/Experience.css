@@ -10,7 +10,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  gap: 1.5rem;
+  gap: 2rem;
+}
+.exp-part1-name h1{
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .job-list {
@@ -28,13 +32,27 @@
   gap:15px;
 }
 
+.job-title-company {
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+}
+
 .job-details {
   margin-left: 16px;
 }
 
 .job-tech-used {
   display: flex;
+  /* flex-direction: column;   */
   gap:10px;
+}
+.job-tech-icon-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:5px;
 }
 
 .job-tech-icon {
@@ -43,6 +61,7 @@
   border-radius: 50%;
   background-color: #27272a;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: 0.4s;
@@ -55,5 +74,17 @@
 
 .job-tech-icon img {
   width: 50%;
+}
 
+.job-tech-name p{
+  font-size: x-small;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .job-title-company {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
 }
