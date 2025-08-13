@@ -1,0 +1,109 @@
+.edu-container {
+  width: 80%;
+  display: flex;
+  margin: 5rem 0; 
+}
+
+.edu-part {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 2rem;
+}
+.edu-part1-name h1{
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.edu-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.edu-logo-name{
+  display: flex;
+  gap: 5px;
+  justify-content: start;
+  align-items: center;
+}
+
+.edu-logo {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.edu-logo img{
+  width: inherit;
+  height: inherit;
+}
+
+.edu-list-part1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap:15px;
+}
+
+.edu-title-company {
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+}
+
+.edu-details {
+  margin-left: 16px;
+}
+
+.edu-tech-used {
+  display: flex;
+  /* flex-direction: column;   */
+  gap:10px;
+}
+.edu-tech-icon-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:5px;
+}
+
+.edu-tech-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #27272a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.edu-tech-icon:hover {
+  transform: translateY(-10px);
+}
+
+
+.edu-tech-icon img {
+  width: 60%;
+}
+
+.edu-tech-name p{
+  font-size: x-small;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .edu-title-company {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}

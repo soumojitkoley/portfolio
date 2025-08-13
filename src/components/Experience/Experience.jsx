@@ -1,6 +1,6 @@
 import React from 'react'
 import { useMediaQuery } from 'react-responsive';
-import expdata from '../../data/experience.js'
+import expData from '../../data/experience.js'
 import './Experience.css'
 
 const Experience = () => {
@@ -13,7 +13,7 @@ const Experience = () => {
         <div className="exp-part1-name">
           <h1>Experience</h1>
         </div>
-        {expdata.map((eachData, idx) => (
+        {expData.map((eachData, idx) => (
           <div className="job-list" key={idx}>
             <div className="job-list-part1">
               <div className="job-title-company">
