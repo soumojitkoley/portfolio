@@ -35,7 +35,7 @@ const Navbar = () => {
 
       {isMobile && (
         <div className="mobile-icons">
-          <a className="link" onClick={() => scrollHandler('#theme')}><MdOutlineLightMode size={20} /></a>
+          <a className="link" onClick={() => setLightMode(!isLightMode)}>{isLightMode ? <MdOutlineLightMode size={20} /> : <MdOutlineDarkMode size={20} />}</a>
           <a className="link" onClick={() => setMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <IoClose size={24} /> : <IoMenu size={24} />}
           </a>
