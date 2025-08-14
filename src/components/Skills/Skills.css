@@ -1,0 +1,26 @@
+.skill-container {
+  width: 80%;
+  display: flex;
+  margin: 5rem 0;
+}
+
+.skill-part {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 2rem;
+}
+
+.skill-part1-name h1{
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.skill-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}

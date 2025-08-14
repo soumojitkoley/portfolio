@@ -54,7 +54,6 @@
 .edu-title-company {
   display: flex;
   flex-direction: column;
-  /* gap: 10px; */
 }
 
 .edu-details {
@@ -63,7 +62,6 @@
 
 .edu-tech-used {
   display: flex;
-  /* flex-direction: column;   */
   gap:10px;
 }
 .edu-tech-icon-name {
@@ -87,7 +85,7 @@
 }
 
 .edu-tech-icon:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 
 

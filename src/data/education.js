@@ -1,14 +1,14 @@
 import aotLogo from '../assets/edu/aot.jpeg'
 import rkvmLogo from '../assets/edu/rkvm.png'
-import oopLogo from '../assets/edu/oop.png'
-import dsaLogo from '../assets/edu/dsa.png'
-import networkLogo from '../assets/edu/network.png'
-import webLogo from '../assets/edu/web.png'
-import cLogo from '../assets/edu/c.png'
-import cppLogo from '../assets/edu/cpp.svg'
-import sqlLogo from '../assets/edu/mysql.svg'
-import dbmsLogo from '../assets/edu/dbms.png'
-import terminalLogo from '../assets/edu/terminal.png'
+import oopLogo from '../assets/stack/oop.png'
+import dsaLogo from '../assets/stack/dsa.png'
+import networkLogo from '../assets/stack/network.png'
+import webLogo from '../assets/stack/web.png'
+import cLogo from '../assets/stack/c.png'
+import cppLogo from '../assets/stack/cpp.svg'
+import sqlLogo from '../assets/stack/mysql.svg'
+import dbmsLogo from '../assets/stack/dbms.png'
+import terminalLogo from '../assets/stack/terminal.png'
 
 const data = [
   {

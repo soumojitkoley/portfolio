@@ -35,7 +35,6 @@
 .job-title-company {
   display: flex;
   flex-direction: column;
-  /* gap: 10px; */
 }
 
 .job-details {
@@ -44,7 +43,6 @@
 
 .job-tech-used {
   display: flex;
-  /* flex-direction: column;   */
   gap:10px;
 }
 .job-tech-icon-name {
@@ -68,7 +66,8 @@
 }
 
 .job-tech-icon:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
+  border: 1px solid #737272;
 }
 
 
