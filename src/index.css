@@ -12,3 +12,33 @@ a {
   text-decoration: none;
   color: inherit;        
 }
+
+.grey {
+  color: #909096;
+}
+
+.black {
+  color: #000000;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.black-theme {
+  color: #ffffff;
+  background-color: #000000
+}
+
+.white-theme {
+  color: #000000;
+  background-color: #ffffff
+}
+
+.m-font {
+  font-size: medium;
+}
+
+.s-font {
+  font-size: small;
+}

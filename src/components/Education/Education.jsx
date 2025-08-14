@@ -23,7 +23,7 @@ const Education = () => {
                   </div>
                   <h2>{eachData.name}</h2>
                 </div>
-                <h3>{eachData.course}</h3>
+                <h3 className='grey m-font'>{eachData.course}</h3>
                 {isMobile ?
                   <div className="edu-date">
                     {<p>{eachData.year}</p>}

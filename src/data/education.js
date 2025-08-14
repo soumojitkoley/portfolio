@@ -12,8 +12,8 @@ import terminalLogo from '../assets/edu/terminal.png'
 
 const data = [
   {
-    name: "Academt of Technology",
-    course: "B.Tech, Electronics & Communication Engineering",
+    name: "Academy of Technology",
+    course: "B.Tech, Electronics & Communication Engineering(ECE)",
     score: "8.47",
     year: "Aug 2020 – July 2024",
     src: aotLogo,

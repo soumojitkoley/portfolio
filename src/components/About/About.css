@@ -7,7 +7,6 @@
 .about-container h1{
   font-size: 2.5rem;
   font-weight: 550;
-  color: #fff;
 }
 .about-container h2{
   font-size: 1.5rem;
@@ -19,7 +18,6 @@
   align-items: start;
   flex-direction: column;
   gap:10px;
-  color: #A1A1AA;
   font-weight: lighter;
 }
 

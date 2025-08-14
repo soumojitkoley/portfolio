@@ -18,7 +18,7 @@ const About = () => {
         <div className="about-part1-name">
           <h1>Soumojit Koley</h1>
         </div>
-        <div className="about-part1-designation">
+        <div className="about-part1-designation grey">
           <h2>
             <TextLoop springConfig={{ stiffness: 70, damping: 31 }} adjustingSpeed={500}>
               <span className='job-logo'>Engineer at Cognizant <img src={cognizant} alt="" width={'20'} height={'20'}/></span>
@@ -29,7 +29,7 @@ const About = () => {
             </TextLoop>
           </h2>
         </div>
-        <div className="about-part1-email-location">
+        <div className="about-part1-email-location grey">
           <div className='about-part1-email'>
             <IoMailOutline size={19} />
             <a href="mailto:koleysoumojit6@gmail.com">koleysoumojit6@gmail.com</a>
@@ -39,7 +39,7 @@ const About = () => {
             <p>Kolkata, India</p>
           </div>
         </div>
-        <div className="about-part1-bio">
+        <div className="about-part1-bio grey">
           <p>A goal-oriented software developer with experience in building web applications using modern technologies like React, Next.js, and more. Seeking to leverage my technical skills to deliver exceptional user experiences.</p>
         </div>
         <div className="about-part1-links">

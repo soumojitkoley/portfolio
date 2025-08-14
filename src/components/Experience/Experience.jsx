@@ -18,14 +18,14 @@ const Experience = () => {
             <div className="job-list-part1">
               <div className="job-title-company">
                 <h2>{eachData.title}</h2>
-                <h3>{eachData.company}</h3>
+                <h3 className='grey m-font'>{eachData.company}</h3>
                 {isMobile ?
                   <div className="job-date">
                     {<p>{eachData.year}</p>}
                   </div> :
                   (<></>)}
               </div>
-              <div className="job-details">
+              <div className="job-details s-font">
                 <ul>
                   {
                     eachData.details.map((eachDetails, idx) => (
