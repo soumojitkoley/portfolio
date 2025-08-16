@@ -13,7 +13,7 @@ const Skills = () => {
             skillsData.map((eachData, idx) => (
               <div className="skill-category">
                 <div className='skill-catogory-name'>
-                  <h1>{eachData.name}</h1>
+                  <h2>{eachData.name}</h2>
                 </div>
                 <div className='skill-category-item'>
                   {
