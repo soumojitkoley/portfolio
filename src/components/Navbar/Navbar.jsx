@@ -36,6 +36,7 @@ const Navbar = () => {
             <li><a className="link" onClick={() => scrollHandler('#education')}>Education</a></li>
             <li><a className="link" onClick={() => scrollHandler('#skills')}>Skills</a></li>
             <li><a className="link" onClick={() => scrollHandler('#projects')}>Projects</a></li>
+            <li><a className="link" onClick={() => scrollHandler('#contact')}>Contact</a></li>
             <li><a className="link" onClick={handleModeClick}>{!isLightMode ? <MdOutlineLightMode size={20} /> : <MdOutlineDarkMode size={20} />}</a></li>
           </ul>
         </div>

@@ -4,6 +4,7 @@ import About from './components/About/About.jsx'
 import Experience from './components/Experience/Experience.jsx';
 import Education from './components/Education/Education.jsx';
 import Skills from './components/Skills/Skills.jsx'
+import Contact from './components/Contact/Contact.jsx';
 import { AppContext } from './Context/AppContext.jsx'
 import LocomotiveScroll from 'locomotive-scroll';
 const locomotiveScroll = new LocomotiveScroll();
@@ -21,6 +22,7 @@ function App() {
       <Experience />
       <Education />
       <Skills/>
+      <Contact/>
     </div>
   )
 }
