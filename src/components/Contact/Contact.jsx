@@ -2,6 +2,7 @@ import React from 'react'
 import { FiMail, FiPhone, FiMapPin, FiLinkedin } from "react-icons/fi";
 import contactData from '../../data/contact.js'
 import './Contact.css'
+import ContactForm from '../../form/ContactForm.jsx';
 
 const Contact = () => {
   return (
@@ -11,6 +12,7 @@ const Contact = () => {
       </div>
       <div className='contact-details'>
         <div className="contact-details-part1">
+          <h2>Get In Touch</h2>
           {
             contactData.map((eachData, idx) => {
               const Icon = eachData.src
@@ -30,7 +32,12 @@ const Contact = () => {
           }
         </div>
         <div className="contact-details-part2">
-
+          <div className="form-title">
+            Send Me a Message
+          </div>
+          <div className="contact-form">
+            <ContactForm/>
+          </div>
         </div>
       </div>
     </div>

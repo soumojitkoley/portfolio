@@ -6,6 +6,7 @@ import Education from './components/Education/Education.jsx';
 import Skills from './components/Skills/Skills.jsx'
 import Contact from './components/Contact/Contact.jsx';
 import { AppContext } from './Context/AppContext.jsx'
+import { Toaster } from 'react-hot-toast';
 import LocomotiveScroll from 'locomotive-scroll';
 const locomotiveScroll = new LocomotiveScroll();
 import './App.css'
@@ -23,6 +24,19 @@ function App() {
       <Education />
       <Skills/>
       <Contact/>
+      <Toaster
+          position="bottom-center"
+          reverseOrder={false}
+          toastOptions={{
+            className: '',
+            duration: 4000,
+            style: {
+              borderRadius: '25px',
+              marginBottom: '3em',
+              textAlign: 'center'
+            },
+          }}
+        />
     </div>
   )
 }

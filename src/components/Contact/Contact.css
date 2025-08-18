@@ -6,6 +6,12 @@
   gap:2rem;
 }
 
+.contact-name h1{
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+
 .contact-details {
   display: flex;
 }
