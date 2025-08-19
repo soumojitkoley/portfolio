@@ -1,0 +1,113 @@
+/* Default (dark mode) */
+.contact-form.dark {
+  --bg: #0a0a0a;
+  --input-bg: #18181b;
+  --input-border: #3f3f46;
+  --input-text: #f3f4f6;
+  --placeholder: #9ca3af;
+  --focus-border: #ffffff;
+  --button-bg: #ffffff;
+  --button-text: #000000;
+  --button-hover: #d6d5dd;
+  --disabled-bg: #3f3f46;
+}
+
+/* Light mode */
+.contact-form.light {
+  --bg: #ffffff;
+  --input-bg: #f9fafb;
+  --input-border: #d1d5db;
+  --input-text: #111827;
+  --placeholder: #6b7280;
+  --focus-border: #000000;
+  --button-bg: #111827;
+  --button-text: #ffffff;
+  --button-hover: #374151;
+  --disabled-bg: #9ca3af;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  /* padding: 1.5rem;
+  background: var(--bg);
+  border: 1px solid var(--input-border);
+  border-radius: 0.75rem; */
+  transition: all 0.3s ease;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-name-part {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-name-part .input {
+  flex: 1;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--input-border);
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  background: var(--input-bg);
+  color: var(--input-text);
+  transition: all 0.2s ease;
+}
+
+.input::placeholder {
+  color: var(--placeholder);
+}
+
+.input:focus {
+  border-color: var(--focus-border);
+  outline: none;
+}
+
+textarea.input {
+  min-height: 120px;
+  resize: vertical;
+}
+
+button.submit {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button.submit:hover:not(.cf-disabled) {
+  background: var(--button-hover);
+}
+
+button.submit.cf-disabled {
+  background: var(--disabled-bg);
+  cursor: not-allowed;
+}
+
+.form-msg-true {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #22c55e; /* green success */
+}
+
+.error-message {
+  margin-top: 0.5rem;
+  color: #f87171; /* red error */
+  font-size: 0.875rem;
+}

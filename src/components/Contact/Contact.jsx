@@ -1,8 +1,7 @@
 import React from 'react'
-import { FiMail, FiPhone, FiMapPin, FiLinkedin } from "react-icons/fi";
 import contactData from '../../data/contact.js'
-import './Contact.css'
 import ContactForm from '../../form/ContactForm.jsx';
+import './Contact.css'
 
 const Contact = () => {
   return (
@@ -33,9 +32,9 @@ const Contact = () => {
         </div>
         <div className="contact-details-part2">
           <div className="form-title">
-            Send Me a Message
+            <h2>Send Me a Message</h2>
           </div>
-          <div className="contact-form">
+          <div className="contact-form-container">
             <ContactForm/>
           </div>
         </div>
