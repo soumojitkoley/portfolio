@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useMediaQuery } from 'react-responsive';
 import expData from '../../data/experience.js'
+import { AppContext } from '../../Context/AppContext.jsx';
 import './Experience.css'
 
 const Experience = () => {
 
   const isMobile = useMediaQuery({ maxWidth: 768 });
+  let { mode } = useContext(AppContext)
 
   return (
     <div className='exp-container' id='experience'>
@@ -14,18 +16,18 @@ const Experience = () => {
           <h1>Experience</h1>
         </div>
         {expData.map((eachData, idx) => (
-          <div className="job-list" key={idx}>
-            <div className="job-list-part1">
-              <div className="job-title-company">
+          <div className="exp-list" key={idx}>
+            <div className="exp-list-part1">
+              <div className="exp-title-company">
                 <h2>{eachData.title}</h2>
                 <h3 className='grey m-font'>{eachData.company}</h3>
                 {isMobile ?
-                  <div className="job-date">
+                  <div className="exp-date">
                     {<p>{eachData.year}</p>}
                   </div> :
                   (<></>)}
               </div>
-              <div className="job-details s-font">
+              <div className="exp-details s-font">
                 <ul>
                   {
                     eachData.details.map((eachDetails, idx) => (
@@ -34,15 +36,15 @@ const Experience = () => {
                   }
                 </ul>
               </div>
-              <div className="job-tech-used">
+              <div className="exp-tech-used">
                 {
                   eachData.tech.map((eachLogo, idx) => (
-                    <div className='job-tech-icon-name' key={idx}>
-                      <div className="job-tech-icon">
+                    <div className='exp-tech-icon-name' key={idx}>
+                      <div className={`exp-tech-icon ${mode ? 'white-icon' : 'dark-icon'}`}>
                         <img src={eachLogo.src} alt="" />
                       </div>
 
-                      <div className="job-tech-name">
+                      <div className="exp-tech-name">
                         <p>{eachLogo.name}</p>
                       </div>
                     </div>
@@ -51,9 +53,9 @@ const Experience = () => {
               </div>
 
             </div>
-            <div className="job-list-part2">
+            <div className="exp-list-part2">
               {!isMobile ?
-                <div className="job-date">
+                <div className="exp-date">
                   {<p>{eachData.year}</p>}
                 </div> :
                 (<></>)}

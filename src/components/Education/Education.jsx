@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import eduData from '../../data/education.js'
 import { useMediaQuery } from 'react-responsive';
+import { AppContext } from '../../Context/AppContext.jsx';
 import './Education.css'
 
 const Education = () => {
   
   const isMobile = useMediaQuery({ maxWidth: 768 });
-
+  let { mode } = useContext(AppContext)
+  
   return (
     <div className='edu-container' id='education'>
       <div className="edu-part">
@@ -34,7 +36,7 @@ const Education = () => {
                 {
                   eachData.subjects.map((eachSubject, idx) => (
                     <div className='edu-tech-icon-name' key={idx}>
-                      <div className="edu-tech-icon">
+                      <div className={`edu-tech-icon ${mode ? 'white-icon' : 'dark-icon'}`}>
                         <img src={eachSubject.src} alt="" />
                       </div>
 

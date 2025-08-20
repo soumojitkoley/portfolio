@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AppContext } from '../../Context/AppContext.jsx';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
 import { IoIosMail, IoMdDownload } from "react-icons/io";
@@ -11,7 +12,30 @@ import cognizant from '../../assets/icons/cognizant.svg'
 import TextLoop from "react-text-loop";
 import './About.css'
 
+const techStack = [
+  { name: "MongoDB", src: mongoo },
+  { name: "React", src: reactt },
+  { name: "Express", src: expresswhite },
+  { name: "NodeJS", src: nodejss }
+]
+
+const socialLinks = [
+  { href: "https://github.com/soumojitkoley", icon: <FaGithub size={20} />, target: "_blank" },
+  { href: "mailto:koleysoumojit6@gmail.com", icon: <IoIosMail size={25} /> },
+  { href: "https://x.com/soumo_dev", icon: <FaSquareXTwitter size={20} />, target: "_blank" },
+  { href: "https://www.linkedin.com/in/soumojitkoley/", icon: <FaLinkedin size={20} />, target: "_blank" },
+];
+
+
 const About = () => {
+
+  const rows = []
+  for (let i = 0; i < techStack.length; i += 2) {
+    rows.push(techStack.slice(i, i + 2))
+  }
+
+  let {mode} = useContext(AppContext)
+
   return (
     <div className='about-container' id='about'>
       <div className="about-part1">
@@ -48,22 +72,29 @@ const About = () => {
             <p>Resume</p>
           </div>
           </a>
-          <a href="https://github.com/soumojitkoley" target='_blank'><div className="about-part1-link-box"><FaGithub size={20} /></div></a>
-          <a href="mailto:koleysoumojit6@gmail.com"><div className="about-part1-link-box"><IoIosMail size={25} /></div></a>
-          <a href="https://x.com/soumo_dev" target='_blank'><div className="about-part1-link-box"><FaSquareXTwitter size={20} /></div></a>
-          <a href="https://www.linkedin.com/in/soumojitkoley/" target='_blank'><div className="about-part1-link-box"><FaLinkedin size={20} /></div></a>
+          {socialLinks.map((link, idx) => (
+        <a 
+          key={idx} 
+          href={link.href} 
+          target={link.target || "_self"} 
+          rel={link.target === "_blank" ? "noopener noreferrer" : ""}
+        >
+          <div className={`about-part1-link-box ${mode ? 'about-ink-box-white' : ''}`}>{link.icon}</div>
+        </a>
+      ))}
         </div>
       </div>
       <div className="about-part2">
-        <div className="about-part2-techbox-row-1">
-          <div className="tech-box"><img src={mongoo} /></div>
-          <div className="tech-box"><img src={reactt} /></div>
+      {rows.map((row, rowIdx) => (
+        <div key={rowIdx} className={`about-part2-techbox-row-${rowIdx + 1}`}>
+          {row.map((tech, idx) => (
+            <div className={`tech-box ${mode ? 'white-icon' : 'dark-icon'}`} key={idx}>
+              <img src={tech.src} alt={tech.name} />
+            </div>
+          ))}
         </div>
-        <div className="about-part2-techbox-row-2">
-          <div className="tech-box"><img src={expresswhite} /></div>
-          <div className="tech-box"><img src={nodejss} /></div>
-        </div>
-      </div>
+      ))}
+    </div>
     </div>
   )
 }

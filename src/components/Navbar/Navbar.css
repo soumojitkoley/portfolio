@@ -10,14 +10,6 @@
   z-index: 99999;
   background-color: #000000;
   color:#fff;
-
-  /* From https://css.glass */
-background: rgba(42, 41, 41, 0.2);
-/* border-radius: 16px; */
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-/* border: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
 .navbar {
@@ -37,7 +29,6 @@ backdrop-filter: blur(5px);
   cursor: pointer;
 }
 
-/* Shared styles */
 .list {
   display: flex;
   gap: 20px;
@@ -55,8 +46,6 @@ backdrop-filter: blur(5px);
   cursor: pointer;
 }
 
-
-/* Desktop nav */
 .nav-menu {
   display: flex;
 }
@@ -69,7 +58,6 @@ backdrop-filter: blur(5px);
   display: none;
 }
 
-/* Mobile icon bar (theme + menu icon) */
 .mobile-icons {
   display: flex;
   gap: 1em;
@@ -77,30 +65,29 @@ backdrop-filter: blur(5px);
   align-items: center;
 }
 
-/* Mobile dropdown animation */
 .mobile-dropdown {
   position: absolute;
   top: 5em;
   right: 0;
   width: 100%;
   overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.4s ease-in-out;
   max-height: 0;
   z-index: 999;
   background: rgba(40, 39, 39, 0.2);
-  border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .mobile-dropdown.open {
   max-height: 400px;
+  
 }
 
 .mobile-dropdown.closed {
   max-height: 0;
+  border: 0.1px solid rgba(255, 255, 255, 0.3);
 }
 
 .mobile-dropdown .list {
@@ -109,5 +96,3 @@ backdrop-filter: blur(5px);
   padding: 1em 0;
   gap: 1.5em;
 }
-
-

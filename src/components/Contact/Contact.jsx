@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import contactData from '../../data/contact.js'
 import ContactForm from '../../form/ContactForm.jsx';
 import './Contact.css'
+import { AppContext } from '../../Context/AppContext.jsx';
 
 const Contact = () => {
+
+  let {mode} = useContext(AppContext)
+
   return (
     <div className='contact-container'>
       <div className="contact-name">
@@ -17,7 +21,7 @@ const Contact = () => {
               const Icon = eachData.src
               return (
                 <div className="each-contact-details">
-                  <div className="each-contact-icon">
+                  <div className={`each-contact-icon ${mode ? 'white-icon' : 'dark-icon'}`}>
                     <Icon size={20} />
                   </div>
                   <div className="each-contact-links">

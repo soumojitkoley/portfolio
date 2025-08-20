@@ -78,7 +78,20 @@
   height: 36px;
   width: 41px;
   color: #fff;
-  background-color: black;
+  background-color: #000 ;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e5e7eb;
+  transition: 0.5s;
+}
+
+.about-ink-box-white{
+  height: 36px;
+  width: 41px;
+  color: #000;
+  background-color: rgb(255, 255, 255) ;
   border-radius: 8px;
   display: flex;
   justify-content: center;
@@ -101,7 +114,6 @@
 .tech-box{
   height: 120px;
   width: 120px;
-  background-color: #27272a;
   border-radius: 10px;
   margin: 25px 15px;
   animation: float 4s ease-in-out infinite;

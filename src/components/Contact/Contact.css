@@ -11,7 +11,6 @@
   font-size: 1.5rem;
 }
 
-
 .contact-details {
   display: flex;
   justify-content: space-between;
@@ -35,7 +34,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(81, 81, 82);
+  transition: 0.4s;
+}
+
+.each-contact-icon:hover {
+  transform: translateY(-5px);
+  border: 1px solid #737272;
 }
 
 .contact-details-part2 {
@@ -43,7 +47,6 @@
   flex-direction: column;
   gap: 2em;
 }
-
 
 @media only screen and (max-width: 768px) {
   .contact-details {

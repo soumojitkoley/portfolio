@@ -6,6 +6,16 @@
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+  --icon-white-mode: rgb(217, 217, 218);
+  --icon-dark-mode: rgb(34, 34, 36);
+}
+
+.white-icon {
+  background-color: var(--icon-white-mode);
+}
+
+.dark-icon {
+  background-color: var(--icon-dark-mode);
 }
 
 a {

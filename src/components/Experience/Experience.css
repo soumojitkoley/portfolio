@@ -17,14 +17,14 @@
   font-size: 1.5rem;
 }
 
-.job-list {
+.exp-list {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: start;
 }
 
-.job-list-part1 {
+.exp-list-part1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,20 +32,20 @@
   gap:15px;
 }
 
-.job-title-company {
+.exp-title-company {
   display: flex;
   flex-direction: column;
 }
 
-.job-details {
+.exp-details {
   margin-left: 16px;
 }
 
-.job-tech-used {
+.exp-tech-used {
   display: flex;
   gap:10px;
 }
-.job-tech-icon-name {
+.exp-tech-icon-name {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,7 +53,7 @@
   gap:5px;
 }
 
-.job-tech-icon {
+.exp-tech-icon {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -65,23 +65,23 @@
   transition: 0.4s;
 }
 
-.job-tech-icon:hover {
+.exp-tech-icon:hover {
   transform: translateY(-5px);
   border: 1px solid #737272;
 }
 
 
-.job-tech-icon img {
+.exp-tech-icon img {
   width: 50%;
 }
 
-.job-tech-name p{
+.exp-tech-name p{
   font-size: x-small;
 }
 
 
 @media only screen and (max-width: 768px) {
-  .job-title-company {
+  .exp-title-company {
     display: flex;
     flex-direction: column;
     gap: 5px;
