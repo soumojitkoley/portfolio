@@ -30,11 +30,9 @@ const ContactForm = () => {
         () => {
           toast.success('Form Submitted Successfully!');
           setFormSubmitted(true);
-          console.log('SUCCESS!');
         },
         (error) => {
           toast.error("Something went wrong");
-          console.log('FAILED...', error.text);
         }
       );
   };
