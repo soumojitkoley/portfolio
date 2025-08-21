@@ -39,7 +39,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className={`navbar-container ${mode ? 'white-theme': ''}`}>
+    <div className={`navbar-container`}>
       <div className='navbar'>
       <h2 onClick={() => scrollHandler('')} className='navbar-h1 l-font'>Hello 👋, World!</h2>
 
@@ -67,7 +67,7 @@ const Navbar = () => {
       )}
 
       {isMobile && (
-        <div className={`mobile-dropdown ${isMenuOpen ? 'open' : 'closed'}`}>
+        <div className={`mobile-dropdown ${isMenuOpen ? 'open' : 'closed'} ${mode ? 'white-theme': ''}`}>
           <ul className="list">
             <li><a className="link" onClick={() => scrollHandler('about')}>About</a></li>
             <li><a className="link" onClick={() => scrollHandler('experience')}>Experience</a></li>

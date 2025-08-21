@@ -45,7 +45,7 @@ const data = [
     name: "RKVM Barrackpore",
     course: "PCM with Computer Science",
     score: "82.4%",
-    year: "Apr 2019 – Mar 2020",
+    year: "Apr 2018 – Mar 2020",
     src: rkvmLogo,
     subjects: [
       {

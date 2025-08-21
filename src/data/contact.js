@@ -4,11 +4,13 @@ const data = [
   {
     name: "Email",
     id: "Koleysoumojit6@gmail.com",
+    href: "mailto:koleysoumojit6@gmail.com",
     src: FiMail
   },
   {
     name: "Phone",
     id: "+91 84206 90779",
+    href: "tel:8420690779",
     src: FiPhone
   },
   {
@@ -19,6 +21,7 @@ const data = [
   {
     name: "LinkedIn",
     id: "linkedin.com/in/soumojitkoley",
+    href: "https://www.linkedin.com/in/soumojitkoley/",
     src: FiLinkedin
   },
 ]

@@ -1,15 +1,16 @@
 import React, { useContext } from 'react'
 import { AppContext } from '../../Context/AppContext.jsx';
 import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
-import { IoMdDownload } from "react-icons/io";
-import { FaXTwitter  } from "react-icons/fa6";
-import { FiMail, FiGithub, FiLinkedin, FiDownload  } from "react-icons/fi";
+import { FaXTwitter } from "react-icons/fa6";
+import { FiMail, FiGithub, FiLinkedin, FiDownload } from "react-icons/fi";
+import toast from 'react-hot-toast';
 import mongoo from '../../assets/stack/mongodb.svg'
 import expresswhite from '../../assets/stack/express-white.svg'
 import reactt from '../../assets/stack/react.svg'
 import nodejss from '../../assets/stack/nodejs.svg'
 import cognizant from '../../assets/icons/cognizant.svg'
 import TextLoop from "react-text-loop";
+import { Fade } from "react-awesome-reveal";
 import './About.css'
 
 const techStack = [
@@ -35,16 +36,20 @@ const About = () => {
 
   let { mode } = useContext(AppContext)
 
+  function resumeDownloadHandler() {
+    toast.success("Resume download started!");
+  }
+
   return (
     <div className='about-container' id='about'>
       <div className="about-part1">
         <div className="about-part1-name">
-          <h1>Soumojit Koley</h1>
+          <Fade cascade damping={1e-1} triggerOnce><h1>Soumojit Koley</h1></Fade>
         </div>
         <div className="about-part1-designation grey">
           <h2>
             <TextLoop springConfig={{ stiffness: 70, damping: 31 }} adjustingSpeed={500}>
-              <span className='job-logo'>Engineer at Cognizant <img src={cognizant} alt="" width={'20'} height={'20'} /></span>
+              <Fade duration={3000} triggerOnce><span className='job-logo'>Engineer at Cognizant <img src={cognizant} alt="" width={'20'} height={'20'} /></span></Fade>
               <span>Software Engineer</span>
               <span>Creative Mind</span>
               <span>Problem Solver</span>
@@ -66,7 +71,7 @@ const About = () => {
           <p className='bold'>A goal-oriented software developer with experience in MERN stack, building efficient and interactive web applications. Passionate about problem-solving and creating seamless user experiences.</p>
         </div>
         <div className="about-part1-links">
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" download>
+          <a href="/resume.pdf" onClick={resumeDownloadHandler} target="_blank" rel="noopener noreferrer" download>
             <div className="resume-download-btn">
               <FiDownload size={20} />
               <p>Resume</p>

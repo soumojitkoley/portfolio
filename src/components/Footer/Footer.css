@@ -1,0 +1,26 @@
+.footer-container {
+  width: 80%;
+  margin-top: -5em;
+  margin-bottom: 5em;
+}
+
+.word {
+  transition: opacity 0.3s ease-in-out;
+  font-size: 3rem;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-container {
+    width: 80%;
+    margin-top: 1em;
+    margin-bottom: 5em;
+  }
+}

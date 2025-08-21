@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import skillsData from '../../data/skills.js'
 import { AppContext } from '../../Context/AppContext.jsx'
+import { Fade } from "react-awesome-reveal";
 import './Skills.css'
 
 const Skills = () => {
@@ -11,25 +12,26 @@ const Skills = () => {
     <div className='skill-container' id='skills'>
       <div className="skill-part">
         <div className="skill-part1-name">
-          <h1>Skills</h1>
+          <Fade direction='up' triggerOnce><h1>Skills</h1></Fade>
         </div>
         <div className="skill-list">
           {
             skillsData.map((eachData, idx) => (
               <div className="skill-category">
                 <div className='skill-catogory-name'>
-                  <h2 className='bold l-font'>{eachData.name}</h2>
+                <Fade direction='up' triggerOnce><h2 className='bold l-font'>{eachData.name}</h2></Fade>
                 </div>
                 <div className='skill-category-item'>
                   {
                     eachData.icons.map((eachLogo, idx) => (
                       <div className='skill-tech-icon-name' key={idx}>
-                        <div className={`skill-tech-icon ${mode ? 'white-icon' : 'dark-icon'}`}>
-                          <img src={eachLogo.src} alt="" />
-                        </div>
-
+                        <Fade direction='up' triggerOnce>
+                          <div className={`skill-tech-icon ${mode ? 'white-icon' : 'dark-icon'}`}>
+                            <img src={eachLogo.src} alt="" />
+                          </div>
+                        </Fade>
                         <div className="skill-tech-name">
-                          <p>{eachLogo.name}</p>
+                          <Fade direction='up' triggerOnce><p>{eachLogo.name}</p></Fade>
                         </div>
                       </div>
                     ))

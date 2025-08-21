@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { useMediaQuery } from 'react-responsive';
 import expData from '../../data/experience.js'
 import { AppContext } from '../../Context/AppContext.jsx';
+import { Fade } from "react-awesome-reveal";
 import './Experience.css'
 
 const Experience = () => {
@@ -13,17 +14,17 @@ const Experience = () => {
     <div className='exp-container' id='experience'>
       <div className="exp-part">
         <div className="exp-part1-name">
-          <h1>Experience</h1>
+        <Fade direction='up' triggerOnce><h1>Experience</h1></Fade>
         </div>
         {expData.map((eachData, idx) => (
           <div className="exp-list" key={idx}>
             <div className="exp-list-part1">
               <div className="exp-title-company">
-                <h2 className='bold'>{eachData.title}</h2>
-                <h3 className='grey m-font bold'>{eachData.company}</h3>
+              <Fade direction='up' triggerOnce><h2 className='bold'>{eachData.title}</h2></Fade>
+              <Fade direction='up' triggerOnce><h3 className='grey m-font bold'>{eachData.company}</h3></Fade>
                 {isMobile ?
                   <div className="exp-date">
-                    {<p className='bold s-font'>{eachData.year}</p>}
+                    {<Fade direction='up' triggerOnce><p className='bold s-font'>{eachData.year}</p></Fade>}
                   </div> :
                   (<></>)}
               </div>
@@ -31,7 +32,7 @@ const Experience = () => {
                 <ul>
                   {
                     eachData.details.map((eachDetails, idx) => (
-                      <li key={idx}>{eachDetails}</li>
+                      <Fade direction='up' triggerOnce><li key={idx}>{eachDetails}</li></Fade>
                     ))
                   }
                 </ul>
@@ -40,12 +41,14 @@ const Experience = () => {
                 {
                   eachData.tech.map((eachLogo, idx) => (
                     <div className='exp-tech-icon-name' key={idx}>
-                      <div className={`exp-tech-icon ${mode ? 'white-icon' : 'dark-icon'}`}>
-                        <img src={eachLogo.src} alt="" />
-                      </div>
+                      <Fade direction='up' triggerOnce>
+                        <div className={`exp-tech-icon ${mode ? 'white-icon' : 'dark-icon'}`}>
+                          <img src={eachLogo.src} alt="" />
+                        </div>
+                      </Fade>
 
                       <div className="exp-tech-name">
-                        <p>{eachLogo.name}</p>
+                        <Fade direction='up' triggerOnce><p>{eachLogo.name}</p></Fade>
                       </div>
                     </div>
                   ))
@@ -56,7 +59,7 @@ const Experience = () => {
             <div className="exp-list-part2">
               {!isMobile ?
                 <div className="exp-date">
-                  {<p className='bold'>{eachData.year}</p>}
+                  <Fade direction='up' triggerOnce>{<p className='bold'>{eachData.year}</p>}</Fade>
                 </div> :
                 (<></>)}
             </div>
