@@ -23,12 +23,12 @@ const Education = () => {
                   <div className="edu-logo">
                     <img src={eachData.src} alt="" />
                   </div>
-                  <h2>{eachData.name}</h2>
+                  <h2 className='bold'>{eachData.name}</h2>
                 </div>
-                <h3 className='grey m-font'>{eachData.course}</h3>
+                <h3 className='grey m-font bold'>{eachData.course}</h3>
                 {isMobile ?
                   <div className="edu-date">
-                    {<p>{eachData.year}</p>}
+                    {<p className='bold s-font'>{eachData.year}</p>}
                   </div> :
                   (<></>)}
               </div>
@@ -52,7 +52,7 @@ const Education = () => {
             <div className="edu-list-part2">
               {!isMobile ?
                 <div className="edu-date">
-                  {<p>{eachData.year}</p>}
+                  {<p className='bold'>{eachData.year}</p>}
                 </div> :
                 (<></>)}
             </div>

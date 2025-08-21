@@ -19,11 +19,11 @@ const Experience = () => {
           <div className="exp-list" key={idx}>
             <div className="exp-list-part1">
               <div className="exp-title-company">
-                <h2>{eachData.title}</h2>
-                <h3 className='grey m-font'>{eachData.company}</h3>
+                <h2 className='bold'>{eachData.title}</h2>
+                <h3 className='grey m-font bold'>{eachData.company}</h3>
                 {isMobile ?
                   <div className="exp-date">
-                    {<p>{eachData.year}</p>}
+                    {<p className='bold s-font'>{eachData.year}</p>}
                   </div> :
                   (<></>)}
               </div>
@@ -56,7 +56,7 @@ const Experience = () => {
             <div className="exp-list-part2">
               {!isMobile ?
                 <div className="exp-date">
-                  {<p>{eachData.year}</p>}
+                  {<p className='bold'>{eachData.year}</p>}
                 </div> :
                 (<></>)}
             </div>

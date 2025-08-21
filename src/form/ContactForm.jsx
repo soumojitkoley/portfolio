@@ -46,14 +46,14 @@ const ContactForm = () => {
     <div className={`contact-form ${mode ? "light" : "dark"}`}>
       <form className="form" ref={form} onSubmit={sendEmail}>
         <div className="form-name-part">
-          <input className="input" type="text" name="user_first_name" placeholder="First Name" required />
-          <input className="input" type="text" name="user_last_name" placeholder="Last Name" required />
+          <input className="input bold s-font" type="text" name="user_first_name" placeholder="Your first name" required />
+          <input className="input bold s-font" type="text" name="user_last_name" placeholder="Your last name" required />
         </div>
         <div className="form-email-part">
-          <input className="input" type="email" name="user_email" placeholder="Email Address" required />
+          <input className="input bold s-font" type="email" name="user_email" placeholder="Your email address" required />
         </div>
         <div className="form-msg-part">
-          <textarea name="message" className="input" placeholder="Type your message here" required />
+          <textarea name="message" className="input bold s-font" placeholder="Type your message here" required />
         </div>
         <button className={`submit ${formSubmitted ? 'cf-disabled' : ''}`} disabled={formSubmitted}>
           {formSubmitted ? (

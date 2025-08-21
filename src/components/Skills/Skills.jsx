@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
 import skillsData from '../../data/skills.js'
-import './Skills.css'
 import { AppContext } from '../../Context/AppContext.jsx'
+import './Skills.css'
+
 const Skills = () => {
 
   let { mode } = useContext(AppContext)
@@ -17,7 +18,7 @@ const Skills = () => {
             skillsData.map((eachData, idx) => (
               <div className="skill-category">
                 <div className='skill-catogory-name'>
-                  <h2>{eachData.name}</h2>
+                  <h2 className='bold l-font'>{eachData.name}</h2>
                 </div>
                 <div className='skill-category-item'>
                   {

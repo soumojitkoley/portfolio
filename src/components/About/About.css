@@ -18,7 +18,6 @@
   align-items: start;
   flex-direction: column;
   gap:10px;
-  font-weight: lighter;
 }
 
 .job-logo {
@@ -63,15 +62,24 @@
 .resume-download-btn{
   height: 36px;
   width: 100px;
-  background-color: black;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap:2px;
+  gap:10px;
   background-color: #fff;
   color: #000;
+  transition: 0.4s;
+}
+
+.resume-download-btn:hover{
+  background-color: #d6d5dd;
+}
+
+.resume-download-btn p{
+  font-weight: 600;
+  font-size: small;
 }
 
 .about-part1-link-box{
@@ -84,28 +92,20 @@
   justify-content: center;
   align-items: center;
   border: 1px solid #e5e7eb;
-  transition: 0.5s;
+  transition: color 0.5s;
 }
 
 .about-ink-box-white{
-  height: 36px;
-  width: 41px;
   color: #000;
   background-color: rgb(255, 255, 255) ;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #e5e7eb;
-  transition: 0.5s;
 }
 
 .about-part1-link-box:hover{
-  color:#858484;
+  color:#a8a3a3;
 }
 
 .about-part2{
-  display: flex;
+  display: flex;  
   justify-content: center;
   align-items: center;
   flex-direction: row;
@@ -124,8 +124,7 @@
 
 .tech-box img{
   height: 50px;
-  width: 50px;
-  
+  width: 50px; 
 }
 
 @keyframes float {

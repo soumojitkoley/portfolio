@@ -23,6 +23,11 @@ a {
   color: inherit;        
 }
 
+.bold {
+  font-weight: 450;
+}
+
+
 .grey {
   color: #909096;
 }
@@ -51,4 +56,7 @@ a {
 
 .s-font {
   font-size: small;
+}
+.l-font {
+  font-size: larger;
 }

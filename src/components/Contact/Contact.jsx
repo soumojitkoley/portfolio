@@ -9,13 +9,13 @@ const Contact = () => {
   let {mode} = useContext(AppContext)
 
   return (
-    <div className='contact-container'>
+    <div className='contact-container' id='contact'>
       <div className="contact-name">
         <h1>Contact</h1>
       </div>
       <div className='contact-details'>
         <div className="contact-details-part1">
-          <h2>Get In Touch</h2>
+          <h2 className='bold'>Get In Touch</h2>
           {
             contactData.map((eachData, idx) => {
               const Icon = eachData.src
@@ -25,18 +25,17 @@ const Contact = () => {
                     <Icon size={20} />
                   </div>
                   <div className="each-contact-links">
-                    <p>{eachData.name}</p>
-                    <p>{eachData.id}</p>
+                    <p className='bold s-font grey'>{eachData.name}</p>
+                    <p className='bold'>{eachData.id}</p>
                   </div>
                 </div>
               );
-
             })
           }
         </div>
         <div className="contact-details-part2">
           <div className="form-title">
-            <h2>Send Me a Message</h2>
+            <h2 className='bold'>Send Me a Message</h2>
           </div>
           <div className="contact-form-container">
             <ContactForm/>
