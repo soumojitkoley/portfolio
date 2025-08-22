@@ -6,10 +6,10 @@ import { Fade } from "react-awesome-reveal";
 import './Education.css'
 
 const Education = () => {
-  
+
   const isMobile = useMediaQuery({ maxWidth: 768 });
   let { mode } = useContext(AppContext)
-  
+
   return (
     <div className='edu-container' id='education'>
       <div className="edu-part">
@@ -21,14 +21,15 @@ const Education = () => {
             <div className="edu-list-part1">
               <div className="edu-title-company">
                 <div className='edu-logo-name'>
-                <Fade direction='up' triggerOnce>
-                  <div className="edu-logo">
-                    <img src={eachData.src} alt="" />
-                  </div>
+                  <Fade direction='up' triggerOnce>
+                    <div className="edu-logo">
+                      <img src={eachData.src} alt="" />
+                    </div>
                   </Fade>
                   <Fade direction='up' triggerOnce><h2 className='bold l-font'>{eachData.name}</h2></Fade>
                 </div>
-                <Fade direction='up' triggerOnce><h3 className='grey m-font bold'>{eachData.course}</h3></Fade>
+                <Fade direction='up' triggerOnce><h2 className='grey m-font bold'>{eachData.score == "8.47" ? 'CGPA: ' : 'Percentage: '} {eachData.score} </h2></Fade>
+                <Fade direction='up' triggerOnce><h2 className='grey m-font bold'>{eachData.course}</h2></Fade>
                 {isMobile ?
                   <div className="edu-date">
                     <Fade direction='up' triggerOnce>{<p className='bold s-font'>{eachData.year}</p>}</Fade>
@@ -40,9 +41,9 @@ const Education = () => {
                   eachData.subjects.map((eachSubject, idx) => (
                     <div className='edu-tech-icon-name' key={idx}>
                       <Fade direction='up' triggerOnce>
-                      <div className={`edu-tech-icon ${mode ? 'white-icon' : 'dark-icon'}`}>
-                        <img src={eachSubject.src} alt="" />
-                      </div>
+                        <div className={`edu-tech-icon ${mode ? 'white-icon' : 'dark-icon'}`}>
+                          <img src={eachSubject.src} alt="" />
+                        </div>
                       </Fade>
                       <div className="edu-tech-name">
                         <Fade direction='up' triggerOnce><p>{eachSubject.name}</p></Fade>
