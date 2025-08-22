@@ -6,6 +6,7 @@ import Education from './components/Education/Education.jsx';
 import Skills from './components/Skills/Skills.jsx'
 import Contact from './components/Contact/Contact.jsx';
 import Footer from './components/Footer/Footer.jsx';
+import BackToTop from './components/BackToTop/BackToTop.jsx';
 import { AppContext } from './Context/AppContext.jsx'
 import { Toaster } from 'react-hot-toast';
 import LocomotiveScroll from 'locomotive-scroll';
@@ -26,6 +27,7 @@ function App() {
       <Skills/>
       <Contact/>
       <Footer/>
+      <BackToTop/>
       <Toaster
           position="bottom-center"
           reverseOrder={false}

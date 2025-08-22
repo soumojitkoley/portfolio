@@ -1,8 +1,7 @@
 import React, { useContext } from 'react'
 import { AppContext } from '../../Context/AppContext.jsx';
-import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
 import { FaXTwitter } from "react-icons/fa6";
-import { FiMail, FiGithub, FiLinkedin, FiDownload } from "react-icons/fi";
+import { FiMail, FiGithub, FiLinkedin, FiDownload, FiMapPin } from "react-icons/fi";
 import toast from 'react-hot-toast';
 import mongoo from '../../assets/stack/mongodb.svg'
 import expresswhite from '../../assets/stack/express-white.svg'
@@ -42,14 +41,15 @@ const About = () => {
 
   return (
     <div className='about-container' id='about'>
+      <Fade duration={3000} triggerOnce>
       <div className="about-part1">
         <div className="about-part1-name">
-          <Fade cascade damping={1e-1} triggerOnce><h1>Soumojit Koley</h1></Fade>
+          <h1>Soumojit Koley</h1>
         </div>
         <div className="about-part1-designation grey">
           <h2>
             <TextLoop springConfig={{ stiffness: 70, damping: 31 }} adjustingSpeed={500}>
-              <Fade duration={3000} triggerOnce><span className='job-logo'>Engineer at Cognizant <img src={cognizant} alt="" width={'20'} height={'20'} /></span></Fade>
+              <span className='job-logo'>Engineer at Cognizant <img src={cognizant} alt="" width={'20'} height={'20'} /></span>
               <span>Software Engineer</span>
               <span>Creative Mind</span>
               <span>Problem Solver</span>
@@ -59,11 +59,11 @@ const About = () => {
         </div>
         <div className="about-part1-email-location grey">
           <div className='about-part1-email'>
-            <IoMailOutline size={19} />
+            <FiMail size={18} />
             <a className='bold' href="mailto:koleysoumojit6@gmail.com">koleysoumojit6@gmail.com</a>
           </div>
           <div className='about-part1-location'>
-            <IoLocationOutline size={19} />
+            <FiMapPin size={17} />
             <p className='bold'>Kolkata, India</p>
           </div>
         </div>
@@ -100,6 +100,7 @@ const About = () => {
           </div>
         ))}
       </div>
+      </Fade>
     </div>
   )
 }
