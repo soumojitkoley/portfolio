@@ -4,6 +4,7 @@ import About from './components/About/About.jsx'
 import Experience from './components/Experience/Experience.jsx';
 import Education from './components/Education/Education.jsx';
 import Skills from './components/Skills/Skills.jsx'
+import Project from './components/Project/Project.jsx';
 import Contact from './components/Contact/Contact.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import BackToTop from './components/BackToTop/BackToTop.jsx';
@@ -25,6 +26,7 @@ function App() {
       <Experience />
       <Education />
       <Skills/>
+      <Project/>
       <Contact/>
       <Footer/>
       <BackToTop/>

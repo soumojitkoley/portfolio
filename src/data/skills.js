@@ -10,6 +10,7 @@ import mongodbLogo from '../assets/stack/mongodb.svg'
 import mysqlLogo from '../assets/stack/mysql.svg'
 import gitLogo from '../assets/stack/git.svg'
 import githubLogo from '../assets/stack/github.svg'
+import githubLogoWhite from '../assets/stack/github-white.svg'
 import vscodeLogo from '../assets/stack/vs-code.svg'
 import netlifyLogo from '../assets/stack/netlify.png'
 

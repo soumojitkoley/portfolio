@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
 import skillsData from '../../data/skills.js'
 import { AppContext } from '../../Context/AppContext.jsx'
-import { Fade } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal"
+import githubLogoWhite from '../../assets/stack/github-white.svg'
 import './Skills.css'
 
 const Skills = () => {
@@ -27,7 +28,7 @@ const Skills = () => {
                       <div className='skill-tech-icon-name' key={idx}>
                         <Fade direction='up' triggerOnce>
                           <div className={`skill-tech-icon ${mode ? 'white-icon' : 'dark-icon'}`}>
-                            <img src={eachLogo.src} alt="" />
+                            <img src={mode && (eachLogo.name == "Github") ? githubLogoWhite : eachLogo.src} alt={eachLogo.name}  />
                           </div>
                         </Fade>
                         <div className="skill-tech-name">

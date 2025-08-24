@@ -26,8 +26,8 @@ const Footer = () => {
           return words[nextIndex];
         });
         setFade(true);
-      }, 300);
-    }, 1000); 
+      }, 500);
+    }, 1500); 
 
     return () => clearInterval(interval);
   }, []);

@@ -6,6 +6,7 @@ import { AppContext } from '../../Context/AppContext.jsx'
 import LocomotiveScroll from 'locomotive-scroll';
 const locomotiveScroll = new LocomotiveScroll();
 import './Navbar.css';
+import { Fade } from 'react-awesome-reveal';
 
 const Navbar = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
@@ -67,7 +68,9 @@ const Navbar = () => {
       )}
 
       {isMobile && (
+        
         <div className={`mobile-dropdown ${isMenuOpen ? 'open' : 'closed'} ${mode ? 'white-theme': ''}`}>
+          <Fade direction='down' duration={2000}>
           <ul className="list">
             <li><a className="link" onClick={() => scrollHandler('about')}>About</a></li>
             <li><a className="link" onClick={() => scrollHandler('experience')}>Experience</a></li>
@@ -76,7 +79,9 @@ const Navbar = () => {
             <li><a className="link" onClick={() => scrollHandler('projects')}>Projects</a></li>
             <li><a className="link" onClick={() => scrollHandler('contact')}>Contact</a></li>
           </ul>
+          </Fade>
         </div>
+        
       )}
       </div>
     </div>
