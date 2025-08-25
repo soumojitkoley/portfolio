@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { AppContext } from '../../Context/AppContext.jsx';
 import { FaXTwitter } from "react-icons/fa6";
 import { FiMail, FiGithub, FiLinkedin, FiDownload, FiMapPin } from "react-icons/fi";
@@ -8,8 +8,8 @@ import expresswhite from '../../assets/stack/express-white.svg'
 import reactt from '../../assets/stack/react.svg'
 import nodejss from '../../assets/stack/nodejs.svg'
 import cognizant from '../../assets/icons/cognizant.svg'
-import TextLoop from "react-text-loop";
 import { Fade } from "react-awesome-reveal";
+import { motion, AnimatePresence } from "framer-motion";
 import './About.css'
 
 const techStack = [
@@ -25,6 +25,34 @@ const socialLinks = [
   { href: "https://x.com/soumo_dev", icon: <FaXTwitter size={20} />, target: "_blank" },
   { href: "https://www.linkedin.com/in/soumojitkoley/", icon: <FiLinkedin size={20} />, target: "_blank" },
 ];
+
+
+const FramerTextLoop = ({ texts, interval = 2000 }) => {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const loop = setInterval(() => {
+      setIndex((prev) => (prev + 1) % texts.length);
+    }, interval);
+    return () => clearInterval(loop);
+  }, [texts, interval]);
+
+  return (
+    <div style={{ height: "30px" }}>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.6 }}
+        >
+          {texts[index]}
+        </motion.div>
+      </AnimatePresence>
+    </div>
+  );
+};
 
 const About = () => {
 
@@ -48,13 +76,16 @@ const About = () => {
         </div>
         <div className="about-part1-designation grey">
           <h2>
-            <TextLoop springConfig={{ stiffness: 70, damping: 31 }} adjustingSpeed={500}>
-              <span className='job-logo'>Engineer at Cognizant <img src={cognizant} alt="" width={'20'} height={'20'} /></span>
-              <span>Software Engineer</span>
-              <span>Creative Mind</span>
-              <span>Problem Solver</span>
-              <span>Tech Enthusiast</span>
-            </TextLoop>
+            <FramerTextLoop
+              texts={[
+                <span className='job-logo'>Engineer at Cognizant <img src={cognizant} alt="" width="20" height="20" /></span>,
+                "Software Engineer",
+                "Creative Mind",
+                "Problem Solver",
+                "Tech Enthusiast"
+              ]}
+              interval={2000}
+            />
           </h2>
         </div>
         <div className="about-part1-email-location grey">
@@ -105,4 +136,4 @@ const About = () => {
   )
 }
 
-export default About  
+export default About
