@@ -10,7 +10,7 @@ const Project = () => {
   let { mode } = useContext(AppContext)
 
   return (
-    <div className='project-container' id='project'>
+    <div className='project-container' id='projects'>
       <div className="project-title">
         <Fade direction='up' triggerOnce><h1>Projects</h1></Fade>
       </div>

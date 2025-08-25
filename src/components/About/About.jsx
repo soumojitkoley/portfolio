@@ -71,7 +71,7 @@ const About = () => {
           <p className='bold'>A goal-oriented software developer with experience in MERN stack, building efficient and interactive web applications. Passionate about problem-solving and creating seamless user experiences.</p>
         </div>
         <div className="about-part1-links">
-          <a href="/resume.pdf" onClick={resumeDownloadHandler} target="_blank" rel="noopener noreferrer" download>
+          <a href="/soumojit_koley_resume.pdf" onClick={resumeDownloadHandler} target="_blank" rel="noopener noreferrer" download>
             <div className="resume-download-btn">
               <FiDownload size={20} />
               <p>Resume</p>

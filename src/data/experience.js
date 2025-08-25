@@ -9,7 +9,7 @@ import nodejsLogo from '../assets/stack/nodejs.svg'
 
 const data = [
   {
-    title: "Engineer Trainee",
+    title: "Programmer Analyst Trainee",
     company: "Cognizant",
     src: "src hehe",
     year: "Feb 2025 – Present",

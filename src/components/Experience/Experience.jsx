@@ -3,6 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 import expData from '../../data/experience.js'
 import { AppContext } from '../../Context/AppContext.jsx';
 import { Fade } from "react-awesome-reveal";
+import ReactRouterLogoWhite from '../../assets/stack/react-router-white.svg'
 import './Experience.css'
 
 const Experience = () => {
@@ -43,7 +44,7 @@ const Experience = () => {
                     <div className='exp-tech-icon-name' key={idx}>
                       <Fade direction='up' triggerOnce>
                         <div className={`exp-tech-icon ${mode ? 'white-icon' : 'dark-icon'}`}>
-                          <img src={eachLogo.src} alt="" />
+                        <img src={mode && eachLogo.name === "React Router" ? ReactRouterLogoWhite : eachLogo.src} alt={eachLogo.name}/>
                         </div>
                       </Fade>
 

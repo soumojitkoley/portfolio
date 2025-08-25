@@ -16,24 +16,20 @@ const Navbar = () => {
   let {modeClickHandler, mode} = useContext(AppContext)
 
   const scrollHandler = (scrollTarget) => {
-    const positions = {
-      about: { desktop: 0, mobile: 0 },
-      experience: { desktop: 400, mobile: 800 },
-      education: { desktop: 1035, mobile: 1590 },
-      skills: { desktop: 1540, mobile: 2170 },
-      contact: { desktop: 2285, mobile: 3010 },
-    };
-  
     if (scrollTarget === "") {
-      locomotiveScroll.scrollTo(0, 0);
+      locomotiveScroll.scrollTo(0);
     } else {
-      const device = isMobile ? "mobile" : "desktop";
-      locomotiveScroll.scrollTo(positions[scrollTarget][device]);
-    }
+      const targetEl = document.getElementById(scrollTarget);
   
+      if (targetEl) {
+        locomotiveScroll.scrollTo(targetEl, {
+          offset: -110,
+        });
+      }
+    }
     setMenuOpen(false);
-  };  
-
+  };
+  
   const handleModeClick = () => {
     setLightMode(!isLightMode);
     modeClickHandler();

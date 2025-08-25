@@ -28,7 +28,8 @@ const Skills = () => {
                       <div className='skill-tech-icon-name' key={idx}>
                         <Fade direction='up' triggerOnce>
                           <div className={`skill-tech-icon ${mode ? 'white-icon' : 'dark-icon'}`}>
-                            <img src={mode && (eachLogo.name == "Github") ? githubLogoWhite : eachLogo.src} alt={eachLogo.name}  />
+                            <img
+                              src={mode && eachLogo.name === "Github" ? githubLogoWhite : eachLogo.src} alt={eachLogo.name}/>
                           </div>
                         </Fade>
                         <div className="skill-tech-name">
