@@ -14,9 +14,9 @@ const data = [
     src: "src hehe",
     year: "Feb 2025 – Present",
     details: [
-      "Assisted in developing internal tools for workflow automation.",
-      "Collaborated with cross-functional teams to improve system efficiency.",
-      "Participated in code reviews and team knowledge sharing sessions."
+      "Developed responsive and dynamic web applications using React.js, JavaScript, and Tailwind CSS, improving cross-device compatibility and reducing UI defects by 30%.",
+      "Built reusable UI components and optimized rendering with React hooks and conditional rendering, which improved application performance and reduced page load time by ~20%.",
+      "Integrated REST APIs and managed state efficiently with React/Context API, enabling real-time data fetching and reducing API response rendering time by ~25%."
     ],
     tech: [
       {
@@ -43,9 +43,9 @@ const data = [
     src: "src hehe",
     year: "Mar 2024 – Jun 2024",
     details: [
-      "Built responsive UI components using React and React Router.",
-      "Improved application performance by optimizing CSS and JavaScript",
-      "Deployed and maintained apps on Netlify for seamless updates."
+      "Designed and developed a fully responsive website using React.js, JavaScript, Tailwind CSS, and Swiper.js, ensuring smooth UI/UX with interactive carousels and cross-device compatibility.",
+      "Implemented SEO best practices with React Helmet, Open Graph and CMS services to optimized rendering and asset loading, which improved page performance and boosted search visibility.",
+      "Integrated EmailJS for contact forms and deployed on Netlify from GitHub, ensuring seamless updates, fast load times, and near 98% uptime."
     ],
     tech: [
       {

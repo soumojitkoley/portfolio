@@ -9,7 +9,7 @@ import './Navbar.css';
 import { Fade } from 'react-awesome-reveal';
 
 const Navbar = () => {
-  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const isMobile = useMediaQuery({ maxWidth: 900 });
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isLightMode, setLightMode] = useState(false);
   

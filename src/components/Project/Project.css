@@ -12,6 +12,7 @@
 }
 
 .projects-cards {
+  width: 80%;
   display: flex;
   flex-direction: column;
   gap:3rem;
@@ -74,4 +75,12 @@
 .project-links-btn p {
   font-weight: 600;
   font-size: small;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .projects-cards {
+    width: 100%;
+  }
 }

@@ -25,6 +25,7 @@
 }
 
 .exp-list-part1 {
+  /* width: 0%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,6 +40,7 @@
 
 .exp-details {
   margin-left: 16px;
+  width: 80%;
 }
 
 .exp-tech-used {
@@ -79,8 +81,20 @@
   font-size: x-small;
 }
 
+.exp-list-part2 {
+  width: 30%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
 
 @media only screen and (max-width: 768px) {
+
+  .exp-details {
+    width: 100%;
+  }
+  
   .exp-title-company {
     display: flex;
     flex-direction: column;
