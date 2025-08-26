@@ -1,7 +1,7 @@
 import React, { useRef, useState, useContext } from 'react';
 import toast from 'react-hot-toast';
 import emailjs from '@emailjs/browser';
-import { FcApproval } from "react-icons/fc";
+import { MdDone } from "react-icons/md";
 import { AppContext } from '../Context/AppContext.jsx';
 import './ContactForm.css';
 
@@ -16,7 +16,7 @@ const ContactForm = () => {
 
     const email = form.current.user_email.value;
     if (!validateEmail(email)) {
-      setErrorMessage('Please enter a valid email address.');
+      toast.error('Please enter a valid email address.');
       return;
     }
 
@@ -38,10 +38,10 @@ const ContactForm = () => {
   };
 
   const validateEmail = (email) => {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return regex.test(email);
   };
-
+  
   return (
     <div className={`contact-form ${mode ? "light" : "dark"}`}>
       <form className="form" ref={form} onSubmit={sendEmail}>
@@ -57,14 +57,13 @@ const ContactForm = () => {
         </div>
         <button className={`submit ${formSubmitted ? 'cf-disabled' : ''}`} disabled={formSubmitted}>
           {formSubmitted ? (
-            <div className='form-msg-true'>
-              Form Submitted <FcApproval />
+            <div className={`form-msg-true bold ${mode ? 'form-msg-true-white' : ''}`}>
+              Form Submitted <MdDone size={20} />
             </div>
           ) : (
             'Submit Form'
           )}
         </button>
-        {errorMessage && <p className="error-message">{errorMessage}</p>}
       </form>
     </div>
   );

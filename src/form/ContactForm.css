@@ -1,4 +1,3 @@
-/* Default (dark mode) */
 .contact-form.dark {
   --bg: #0a0a0a;
   --input-bg: #18181b;
@@ -9,10 +8,9 @@
   --button-bg: #ffffff;
   --button-text: #000000;
   --button-hover: #d6d5dd;
-  --disabled-bg: #3f3f46;
+  --disabled-bg: #ffffff;
 }
 
-/* Light mode */
 .contact-form.light {
   --bg: #ffffff;
   --input-bg: #f9fafb;
@@ -20,19 +18,15 @@
   --input-text: #111827;
   --placeholder: #6b7280;
   --focus-border: #000000;
-  --button-bg: #111827;
+  --button-bg: #000000;
   --button-text: #ffffff;
-  --button-hover: #374151;
-  --disabled-bg: #9ca3af;
+  --button-hover: #3e3d3d;
+  --disabled-bg: #000000;;  
 }
 
 .contact-form {
   width: 100%;
   max-width: 600px;
-  /* padding: 1.5rem;
-  background: var(--bg);
-  border: 1px solid var(--input-border);
-  border-radius: 0.75rem; */
   transition: all 0.3s ease;
 }
 
@@ -103,11 +97,9 @@ button.submit.cf-disabled {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  color: #22c55e; /* green success */
+  color:#000000;
 }
 
-.error-message {
-  margin-top: 0.5rem;
-  color: #f87171; /* red error */
-  font-size: 0.875rem;
+.form-msg-true-white {
+  color: #ffffff;
 }

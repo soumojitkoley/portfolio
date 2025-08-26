@@ -40,7 +40,7 @@ const Contact = () => {
           <div className="form-title">
             <Fade direction='up' triggerOnce><h2 className='bold'>Send Me a Message</h2></Fade>
           </div>
-          <div className="contact-form-container">
+          <div className={`contact-form-container ${mode ? 'white-theme' : 'black-theme'}`}>
             <ContactForm />
           </div>
         </div>
