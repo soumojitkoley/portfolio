@@ -82,13 +82,11 @@
 }
 
 .mobile-dropdown.open {
-  max-height: 400px;
-  
+  max-height: 400px; 
 }
 
 .mobile-dropdown.closed {
   max-height: 0;
-  /* border: 0.1px solid rgba(255, 255, 255, 0.3); */
 }
 
 .mobile-dropdown .list {

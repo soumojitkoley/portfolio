@@ -12,6 +12,7 @@
   align-items: start;
   gap: 3rem;
 }
+
 .edu-part1-name h1{
   font-weight: bold;
   font-size: 1.5rem;
@@ -88,7 +89,6 @@
   border: 1px solid #737272;
 }
 
-
 .edu-tech-icon img {
   width: 60%;
 }
@@ -96,7 +96,6 @@
 .edu-tech-name p{
   font-size: x-small;
 }
-
 
 @media only screen and (max-width: 768px) {
   .edu-title-company {
