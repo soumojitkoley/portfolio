@@ -65,6 +65,7 @@ const ContactForm = () => {
           )}
         </button>
       </form>
+      {/* message sent part will apper here */}
     </div>
   );
 };

@@ -1,3 +1,5 @@
-Work in progress!
+Thank you for visiting my portfolio github repository.
 
-Comming Soon
+Project is deployed at: https://soumodev.netlify.app/
+
+Many new things are yet to be made, so all the updates will come in structured manner, thanks!
