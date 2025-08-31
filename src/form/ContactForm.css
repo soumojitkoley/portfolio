@@ -83,13 +83,8 @@ button.submit {
   transition: all 0.2s ease;
 }
 
-button.submit:hover:not(.cf-disabled) {
+button.submit:hover {
   background: var(--button-hover);
-}
-
-button.submit.cf-disabled {
-  background: var(--disabled-bg);
-  cursor: not-allowed;
 }
 
 .form-msg-true {
@@ -102,4 +97,65 @@ button.submit.cf-disabled {
 
 .form-msg-true-white {
   color: #ffffff;
+}
+
+.form-submit-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-direction: column;
+  background-color: rgba(14, 53, 30, 0.6);
+  border-radius: 10px;
+  padding: 2rem 0;
+  text-align: center;
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(14, 51, 15, 1);
+}
+
+.form-submit-container-white {
+  background-color: rgba(204, 236, 217, 0.6);
+  border: 1px solid rgb(119, 183, 121);
+}
+
+.form-submit-container p {
+  width: 70%;
+}
+
+.form-submit-container button{
+  width: 45%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.form-submit-container button:hover {
+  background: var(--button-hover);
+}
+
+
+@media only screen and (max-width: 900px) {
+  .form-submit-container p {
+    width: 90%;
+  }
+
+  .form-submit-container button{
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+ 
+  .form-submit-container button{
+    width: 55%;
+  }
 }

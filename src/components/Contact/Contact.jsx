@@ -21,7 +21,7 @@ const Contact = () => {
             contactData.map((eachData, idx) => {
               const Icon = eachData.src
               return (
-                <div className="each-contact-details">
+                <div className="each-contact-details" key={idx}>
                   <Fade direction='up' triggerOnce>
                     <div className={`each-contact-icon ${mode ? 'white-icon' : 'dark-icon'}`}>
                       <Icon size={20} />
