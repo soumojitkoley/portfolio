@@ -38,7 +38,7 @@ const Navbar = () => {
   return (
     <div className={`navbar-container`}>
       <div className='navbar'>
-      <h2 onClick={() => scrollHandler('')} className='navbar-h1 l-font'>Hello 👋, World!</h2>
+      <h2 onClick={() => scrollHandler('')} className='navbar-h1 l-font'>SK.</h2>
 
       {!isMobile && (
         <div className="nav-menu menu-open">

@@ -179,4 +179,9 @@
   .about-part1-bio{
     width: 80%;
   }
+
+  .about-part1-links{
+    flex-wrap: wrap;
+  }
+  
 }

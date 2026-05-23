@@ -38,7 +38,7 @@ const Footer = () => {
         <Fade direction='up' triggerOnce><h1 className={`word ${fade ? "fade-in" : "fade-out"}`}>{word}</h1></Fade>
       </div>
       <div className="footer-part-2">
-        <p className="bold s-font grey">© 2025 Soumojit. All rights reserved.</p>
+        <p className="bold s-font grey">© 2026 Soumojit. All rights reserved.</p>
       </div>
     </div>
   );
