@@ -1,35 +1,34 @@
 import React, { useContext } from 'react';
-import Navbar from './components/Navbar/Navbar.jsx'
-import About from './components/About/About.jsx'
-import Experience from './components/Experience/Experience.jsx';
-import Education from './components/Education/Education.jsx';
-import Skills from './components/Skills/Skills.jsx'
-import Project from './components/Project/Project.jsx';
-import Contact from './components/Contact/Contact.jsx';
-import Footer from './components/Footer/Footer.jsx';
-import BackToTop from './components/BackToTop/BackToTop.jsx';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Home from './pages/Home/Home.jsx';
+import Dev from './pages/Dev/Dev.jsx';
+import Support from './pages/Support/Support.jsx';
 import { AppContext } from './Context/AppContext.jsx'
 import { Toaster } from 'react-hot-toast';
-import LocomotiveScroll from 'locomotive-scroll';
-const locomotiveScroll = new LocomotiveScroll();
 import './App.css'
 
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />
+  },
+  {
+    path: '/dev',
+    element: <Dev />
+  },
+  {
+    path: '/support',
+    element: <Support />
+  }
+])
 
-function App() {
+const App = () => {
 
   let {mode} = useContext(AppContext)
 
   return (
     <div className={`app-container ${mode ? 'white-theme': 'black-theme'}`}>
-      <Navbar />
-      <About />
-      <Experience />
-      <Education />
-      <Skills/>
-      <Project/>
-      <Contact/>
-      <Footer/>
-      <BackToTop/>
+      <RouterProvider router={router} />
       <Toaster
           position="bottom-center"
           reverseOrder={false}
@@ -42,7 +41,7 @@ function App() {
               textAlign: 'center'
             },
           }}
-        />
+      />
     </div>
   )
 }
